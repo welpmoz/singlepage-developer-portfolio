@@ -1,0 +1,23 @@
+:root {
+    --black: #151515;
+    --green: #4EE1A0;
+    --dark-grey: #242424;
+    --grey: #D9D9D9;
+    --white: #FFFFFF;
+    --error: #FF6F5B;
+}
+
+$colors: (
+    "black": var(--black),
+    "green": var(--green),
+    "dark-grey": var(--dark-grey),
+    "grey": var(--grey),
+    "white": var(--white),
+    "error": var(--error),
+);
+
+@each $name, $color in $colors {
+    .color-#{$name} {
+        color: $color;
+    }
+}

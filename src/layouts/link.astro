@@ -1,0 +1,16 @@
+---
+const { innerLink = true, isText = true, link } = Astro.props;
+const myStyle = `${isText ? 'text-button button--text' : 'button--icon'}`
+---
+
+{
+  innerLink ? (
+    <a href={link} class={`button ${myStyle}`}>
+      <slot />
+    </a>
+  ) : (
+    <a href={link} class={`button ${myStyle}`} target="_blank">
+      <slot />
+    </a>
+  )
+}

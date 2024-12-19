@@ -1,0 +1,7 @@
+---
+const { innerLink = true, link, text } = Astro.props;
+---
+{innerLink
+    ? <a href={link} class="button text-button">{text}</a>
+    : <a href={link} class="button text-button" target="_blank">{text}</a>
+}

@@ -1,0 +1,18 @@
+---
+import Link from "../layouts/link.astro";
+import Project from "./project.astro";
+
+const allProjects = await Astro.glob("../projects/*.md");
+---
+
+<div class="grid__item projects">
+  <div class="projects__header">
+    <h2 class="text-display color-white">Projects</h2>
+    <Link link="#footer">
+        contact me
+    </Link>
+  </div>
+  <div class="projects__content">
+    {allProjects.map((project) => <Project {...project.frontmatter} />)}
+  </div>
+</div>

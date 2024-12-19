@@ -1,0 +1,28 @@
+@use '../utils/' as u;
+
+.social-data {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    @include u.breakpoint(medium) {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2.56rem;
+
+    @include u.breakpoint(medium) {
+        gap: 3.2rem;
+    }
+
+    &--floating {
+        padding-right: 3rem;
+    }
+}

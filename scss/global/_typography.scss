@@ -1,0 +1,111 @@
+@use '../utils/' as u;
+
+@font-face {
+    font-family: 'SpaceGrotesk';
+    src: url('/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('ttf');
+}
+
+:root {
+    font-family: 'SpaceGrotesk', sans-serif;
+    font-size: 62.5%;
+}
+
+.text-name {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    letter-spacing: -0.33px;
+    transition: all 0.3s ease-out;
+
+    @include u.breakpoint(medium) {
+        font-size: 3.2rem;
+        letter-spacing: -0.44px;
+    }
+}
+
+.text-display {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4rem;
+    letter-spacing: -1.14px;
+    transition: all 0.3s ease-out;
+
+    &--highlighted {
+        border-bottom: 0.4rem solid var(--green);
+    }
+
+    @include u.breakpoint(medium) {
+        font-size: 7.2rem;
+        line-height: 7.2rem;
+        letter-spacing: -2.05px;
+    }
+
+    @include u.breakpoint(large) {
+        font-size: 8.8rem;
+        line-height: 8.8rem;
+        letter-spacing: -2.5px;
+    }
+}
+
+.text-body {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    letter-spacing: 0px;
+    transition: all 0.3s ease-out;
+
+    @include u.breakpoint(medium) {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+}
+
+.text-button {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    letter-spacing: 2.29px;
+}
+
+.text-heading-1 {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    letter-spacing: -1px;
+    transition: all 0.3s ease-out;
+
+    @include u.breakpoint(medium) {
+        font-size: 4.8rem;
+        line-height: 5.6rem;
+        letter-spacing: -1.5px;
+    }
+}
+
+.text-heading-2 {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    letter-spacing: 0px;
+}
+
+.text-tag {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    letter-spacing: 0px;
+}
+
+.text-input {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    letter-spacing: -0.22px;
+    text-transform: uppercase;
+}
+
+.text-caption {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: -0.17px;
+}

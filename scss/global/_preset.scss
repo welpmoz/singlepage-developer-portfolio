@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--black);
+}

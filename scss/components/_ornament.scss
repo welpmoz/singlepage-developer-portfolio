@@ -1,0 +1,93 @@
+@use '../utils/' as u;
+
+.ornament {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+
+    &--rings {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 53rem;
+            height: 12.9rem;
+            background-image: url('../../src/assets/images/pattern-rings.svg');
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    &--circle {
+        &::after {
+            content: '';
+            position: absolute;
+            width: 12.9rem;
+            height: 12.9rem;
+            background-image: url('../../src/assets/images/pattern-circle.svg');
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    &--presentation {
+        &::before {
+            left: -34.2rem;
+            top: 12.4rem;
+
+            @include u.breakpoint(medium) {
+                left: -26.5rem;
+                top: 8.6rem;
+            }
+
+            @include u.breakpoint(large) {
+                left: -10rem;
+                top: 13.3rem;
+            }
+        }
+
+        &::after {
+            bottom: 36.4rem;
+            right: -6.5rem;
+
+            @include u.breakpoint(medium) {
+                bottom: 6rem;
+                right: -6.3rem;
+            }
+
+            @include u.breakpoint(large) {
+                right: 54.5rem;
+                bottom: 17.4rem;
+            }
+        }
+    }
+
+    &--skills {
+        &::before {
+            right: -34.4rem;
+            bottom: 0rem;
+
+            @include u.breakpoint(medium) {
+                right: -33.2rem;
+            }
+
+            @include u.breakpoint(large) {
+                right: -23.9rem;
+            }
+        }
+    }
+
+    &--footer {
+        &::before {
+            top: 43.6rem;
+            left: -34.5rem;
+
+            @include u.breakpoint(medium) {
+                top: 54.7rem;
+                left: -36.8rem;
+            }
+
+            @include u.breakpoint(large) {
+                top: 32.7rem;
+                left: -20.5rem;
+            }
+        }
+    }
+}

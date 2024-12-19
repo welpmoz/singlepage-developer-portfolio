@@ -1,0 +1,107 @@
+@use '../utils/' as u;
+
+.presentation {
+    position: relative;
+    margin-bottom: 8rem;
+    padding: 0rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+
+    @include u.breakpoint(medium) {
+        margin-bottom: 6rem;
+        padding: unset;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        gap: 5rem;
+    }
+
+    @include u.breakpoint(large) {
+        margin-bottom: 10.4rem;
+        display: grid;
+        grid-template-columns: repeat(12, 6.5rem);
+        grid-template-rows: auto;
+        gap: 3rem;
+        justify-content: center;    
+    }
+
+    &__image {
+        @include u.breakpoint(medium) {
+            grid-row: 1;
+            grid-column: 8 / 13;
+        }
+
+        @include u.breakpoint(large) {
+            grid-row: 1;
+            grid-column: 8 / 13;
+        }
+
+        &--mobile {
+            @include u.breakpoint(medium) {
+                display: none;
+            }
+        }
+
+        &--tablet {
+            display: none;
+
+            @include u.breakpoint(medium) {
+                display: block;
+            }
+
+            @include u.breakpoint(large) {
+                display: none;
+            }
+        }
+
+        &--desktop {
+            display: none;
+
+            @include u.breakpoint(large) {
+                display: block;
+            }
+        }
+    }
+
+    &__text {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        align-items: center;
+
+        @include u.breakpoint(medium) {
+            grid-row: 1;
+            grid-column: 1 / 11;
+            margin-left: 3.2rem;
+            height: 100%;
+            text-align: left;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+
+        @include u.breakpoint(large) {
+            grid-row: 1;
+            grid-column: 1 / 10;
+            margin-left: unset;
+            text-align: left;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .text-body {
+            @include u.breakpoint(medium) {
+                max-width: 40ch;
+                margin-bottom: 0.5rem;
+                margin-top: 1.8rem;
+            }
+
+            @include u.breakpoint(medium) {
+                margin-top: 1.9rem;
+                margin-bottom: 4.2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+---
+import SocialLinks from "./social-links.astro";
+const { floating = false } = Astro.props;
+---
+
+<div class="grid__item social-data">
+  <span class="text-name color-white">roswellpando</span>
+  <SocialLinks floating={floating} />
+</div>

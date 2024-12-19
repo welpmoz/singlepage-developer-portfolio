@@ -1,0 +1,31 @@
+.button {
+    border: none;
+    background: none;
+    color: var(--white);
+    text-transform: uppercase;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--green);
+    }
+
+    &--icon {
+        &:hover {
+            scale: 1.25;
+        }
+    }
+
+    &--text {
+        padding-bottom: 1rem;
+        text-decoration: none;
+        border-bottom: 0.2rem solid var(--green);
+        text-transform: uppercase;
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}

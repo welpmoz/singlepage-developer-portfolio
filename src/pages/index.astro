@@ -1,11 +1,138 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import "../global.css";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Projects from "../components/projects.astro";
+import Skills from "../components/skills.astro";
+import Link from "../layouts/link.astro";
+import SocialData from "../components/social-data.astro";
+
+import mobileProfileImage from "../assets/images/image-profile-mobile.webp";
+import tabletProfileImage from "../assets/images/image-profile-tablet.webp";
+import desktopProfileImage from "../assets/images/image-profile-desktop.webp";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Single Page Developer Portfolio</title>
+  </head>
+  <body>
+    <main>
+      <div
+        class="ornament ornament--rings ornament--circle ornament--presentation"
+      >
+        <div class="presentation">
+          <div class="grid grid--floating">
+            <SocialData  floating={true} />
+          </div>
+
+          <img
+            class="presentation__image presentation__image--mobile"
+            src={mobileProfileImage.src}
+            alt="Profile Image"
+            width="174"
+            height="383"
+          />
+
+          <img
+            class="presentation__image presentation__image--tablet"
+            src={tabletProfileImage.src}
+            alt="Profile Image"
+          />
+
+          <img
+            class="presentation__image presentation__image--desktop"
+            src={desktopProfileImage.src}
+            alt="Profile Image"
+            width="445"
+            height="720"
+          />
+
+          <div class="presentation__text">
+            <h1 class="text-display color-white">
+              Nice to meet you! I'm
+              <span class="text-display--highlighted"> Roswell Pando</span>.
+            </h1>
+
+            <p class="text-body color-grey">
+              Based in the UK, I'm a front-end developer passionate about
+              building accessible web apps that users love.
+            </p>
+
+            <Link link="#footer"> contact me </Link>
+          </div>
+        </div>
+      </div>
+
+      <div class="ornament ornament--skills ornament--rings">
+        <div class="grid">
+          <Skills />
+        </div>
+      </div>
+
+      <div class="grid">
+        <Projects />
+      </div>
+    </main>
+    <footer
+      id="footer"
+      class="footer ornament ornament--rings ornament--footer"
+    >
+      <div class="grid">
+        <div class="grid__item">
+          <form class="contact-form">
+            <div class="contact-form__heading">
+              <h3 class="text-display color-white">Contact</h3>
+              <p class="text-body color-grey">
+                I would love to hear about your project and how I could help.
+                Please fill in the form, and I'll get back to you as soon as
+                possible.
+              </p>
+            </div>
+            <div class="contact-form__body">
+              <div class="contact-form__field">
+                <input
+                  class="text-input input-text color-white"
+                  type="text"
+                  placeholder="name"
+                />
+                <span class="text-caption color-error util--end util--hidden"
+                  >Sorry, invalid format here</span
+                >
+              </div>
+              <div class="contact-form__field">
+                <input
+                  class="text-input input-text color-white"
+                  type="text"
+                  placeholder="email"
+                />
+                <span class="text-caption color-error util--end util--hidden"
+                  >Sorry, invalid format here</span
+                >
+              </div>
+              <div class="contact-form__field">
+                <textarea
+                  class="text-input input-text color-white"
+                  placeholder="message"
+                  rows="3"></textarea>
+                <span class="text-caption color-error util--end util--hidden"
+                  >Sorry, invalid format here</span
+                >
+              </div>
+              <button
+                class="button button--text text-button util--end"
+                type="submit"
+              >
+                send message
+              </button>
+            </div>
+          </form>
+          <SocialData />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

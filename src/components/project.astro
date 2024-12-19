@@ -1,0 +1,19 @@
+---
+import Link from "../layouts/link.astro";
+
+const { image, title, stack, github, liveSite } = Astro.props;
+---
+
+<div class="project">
+  <img src={image.url} alt={image.alt} />
+  <div class="project__description">
+    <h3 class="text-heading-2 color-white">{title}</h3>
+    <div class="project__stack text-tag color-grey">
+      {stack.map((tech) => <span>{tech}</span>)}
+    </div>
+  </div>
+  <div class="buttons">
+    <Link innerLink={false} link={liveSite}>view project</Link>
+    <Link innerLink={false} link={github}>view code</Link>
+  </div>
+</div>

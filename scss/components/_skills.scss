@@ -1,0 +1,39 @@
+@use '../utils/' as u;
+
+.skills {
+    margin-bottom: 6.5rem;
+    padding: 4rem 0rem;
+    border-bottom: 0.1rem solid var(--white);
+    border-top: 0.1rem solid var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: center;
+
+    @include u.breakpoint(medium) {
+        margin-bottom: 1.3rem;
+        padding: 5.2rem 0rem;
+        border-bottom: 0.1rem solid var(--black);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: flex-start;
+    }
+
+    @include u.breakpoint(large) {
+        margin-bottom: unset;
+        padding: 7.2rem 0rem 5.5rem 0rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    align-items: center;
+
+    @include u.breakpoint(medium) {
+        align-items: flex-start;
+    }
+}

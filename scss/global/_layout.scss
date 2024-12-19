@@ -1,0 +1,46 @@
+@use '../utils/' as u;
+
+.grid {
+    padding: 0rem 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    grid-template-rows: auto;
+
+    @include u.breakpoint(medium) {
+        grid-template-columns: repeat(8, 7.2rem);
+        gap: 1.9rem;
+    }
+
+    @include u.breakpoint(large) {
+        grid-template-columns: repeat(12, 6.5rem);
+        gap: 3rem;
+    }
+
+    &__item {
+        grid-column: 1 / 5;
+        
+        @include u.breakpoint(medium) {
+            grid-column: 1 / 9;
+        }
+
+        @include u.breakpoint(large) {
+            grid-column: 1 / 13;
+        }
+    }
+
+    &--floating {
+        position: absolute;
+        width: 100%;
+        top: 2rem;
+
+        @include u.breakpoint(medium) {
+            top: 2.9rem;
+        }
+
+        @include u.breakpoint(large) {
+            top: 3.9rem;
+        }
+    }
+}
