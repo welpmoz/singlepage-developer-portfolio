@@ -51,10 +51,12 @@ body {
 
 .util--hidden {
   visibility: hidden;
+  transition: visibility 0.3s ease-out;
 }
 
 .util--visible {
   visibility: visible;
+  transition: visibility 0.3s ease-out;
 }
 
 .util--end {
@@ -253,6 +255,11 @@ body {
   flex-direction: row;
   gap: 3rem;
 }
+@media (width >= 75rem) {
+  .buttons {
+    display: none;
+  }
+}
 
 .projects {
   display: flex;
@@ -314,6 +321,32 @@ body {
   flex-direction: row;
   gap: 1.8rem;
   flex-wrap: wrap;
+}
+.project__image-wrapper {
+  position: relative;
+}
+.project__image-wrapper:hover .project__links {
+  opacity: 1;
+}
+.project__links {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+@media (width >= 75rem) {
+  .project__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4.8rem;
+  }
 }
 
 .skills {
@@ -574,6 +607,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.input-text-wrapper {
+  position: relative;
 }
 
 .input-text {

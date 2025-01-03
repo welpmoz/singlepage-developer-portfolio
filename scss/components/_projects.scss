@@ -60,4 +60,32 @@
         gap: 1.8rem;
         flex-wrap: wrap;
     }
+
+    &__image-wrapper {
+        position: relative;
+
+        &:hover .project__links {
+            opacity: 1;
+        }
+    }
+
+    &__links {
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+
+        @include u.breakpoint(large) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4.8rem;
+        }
+    }
 }

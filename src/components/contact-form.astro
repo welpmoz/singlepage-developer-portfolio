@@ -1,0 +1,49 @@
+<form class="contact-form" id="contact-form">
+  <div class="contact-form__heading">
+    <h3 class="text-display color-white">Contact</h3>
+    <p class="text-body color-grey">
+      I would love to hear about your project and how I could help. Please fill
+      in the form, and I'll get back to you as soon as possible.
+    </p>
+  </div>
+  <div class="contact-form__body">
+    <div class="contact-form__field">
+      <input
+        class="text-input input-text color-white"
+        name="name"
+        type="text"
+        placeholder="name"
+      />
+      <span class="text-caption color-error util--end util--hidden" id="name-error"
+        >Sorry, invalid format here</span
+      >
+    </div>
+    <div class="contact-form__field">
+      <input
+        class="text-input input-text color-white"
+        name="email"
+        type="text"
+        placeholder="email"
+      />
+      <span class="text-caption color-error util--end util--hidden" id="email-error"
+        >Sorry, invalid format here</span
+      >
+    </div>
+    <div class="contact-form__field">
+      <textarea
+        class="text-input input-text color-white"
+        name="message"
+        placeholder="message"
+        rows="3"></textarea>
+      <span class="text-caption color-error util--end util--hidden" id="message-error"
+        >Sorry, invalid format here</span
+      >
+    </div>
+    <button class="button button--text text-button util--end" type="submit">
+      send message
+    </button>
+  </div>
+</form>
+<script>
+    import '../scripts/contact-form.js';
+</script>

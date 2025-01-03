@@ -15,10 +15,12 @@ $breakpoints: (
 
 .util--hidden {
     visibility: hidden;
+    transition: visibility 0.3s ease-out;
 }
 
 .util--visible {
     visibility: visible;
+    transition: visibility 0.3s ease-out;
 }
 
 .util--end {

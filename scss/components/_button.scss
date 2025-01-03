@@ -1,3 +1,5 @@
+@use '../utils/' as u;
+
 .button {
     border: none;
     background: none;
@@ -28,4 +30,8 @@
     display: flex;
     flex-direction: row;
     gap: 3rem;
+
+    @include u.breakpoint(large) {
+        display: none;
+    }
 }
