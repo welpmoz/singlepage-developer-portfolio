@@ -1,10 +1,10 @@
 ---
 import Link from "../layouts/link.astro";
 
-const { image, title, stack, github, liveSite } = Astro.props;
+const { image, title, stack, github, liveSite, index } = Astro.props;
 ---
 
-<div class="project">
+<div class="project" data-index={index}>
   <div class="project__image-wrapper">
     <img src={image.url} alt={image.alt} />
     <div class="project__links">

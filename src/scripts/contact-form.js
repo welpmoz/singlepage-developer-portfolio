@@ -72,6 +72,8 @@ const handleSubmit = (e) => {
     e.preventDefault();
 
     if (formIsValid(e.currentTarget, emptyValidations)) {
+        // logic for send email
+        
         // clearSuccess function
         renderSuccess(e.currentTarget);
     } else {

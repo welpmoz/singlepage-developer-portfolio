@@ -13,6 +13,9 @@ const allProjects = await Astro.glob("../projects/*.md");
     </Link>
   </div>
   <div class="projects__content">
-    {allProjects.map((project) => <Project {...project.frontmatter} />)}
+    {allProjects.map((project, i) => <Project {...project.frontmatter} index={i} />)}
   </div>
 </div>
+<script>
+  import "../scripts/projects";
+</script>

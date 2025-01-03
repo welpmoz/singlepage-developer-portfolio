@@ -1,6 +1,6 @@
 ---
 title: 'Frontend Quiz app'
-stack: ['NextJS', 'SASS', 'APIRest']
+stack: ['NextJS', 'SASS', 'APIRest', 'FastAPI', 'Python']
 image:
     url: "/images/thumbnail-project-2-small.webp"
     alt: 'Frontend Quiz App Image'
