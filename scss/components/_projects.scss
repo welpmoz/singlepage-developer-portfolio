@@ -64,7 +64,8 @@
     &__image-wrapper {
         position: relative;
 
-        &:hover .project__links {
+        &:hover .project__links,
+        .project__links:has(.button:focus) {
             opacity: 1;
         }
     }

@@ -325,7 +325,8 @@ body {
 .project__image-wrapper {
   position: relative;
 }
-.project__image-wrapper:hover .project__links {
+.project__image-wrapper:hover .project__links,
+.project__image-wrapper .project__links:has(.button:focus) {
   opacity: 1;
 }
 .project__links {
